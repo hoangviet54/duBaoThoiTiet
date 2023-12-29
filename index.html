@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<script src="./js/all.min.js"></script>
+<script src="./js/moment.js"></script>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            color: white;
+            background: linear-gradient(149deg,#2193b0,#6dd5ed);
+            width: 400px;
+            margin: 50px auto;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .search-bar {
+            width: 50%;
+            margin: 0 auto;
+            padding-top: 20px;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid white;
+        }
+        .search-icon {
+            margin-right: 5px;
+            position: absolute;
+            left: 0px;
+        }
+        .search-input {
+            width: 90%;
+            border: 0;
+            outline: 0;
+            padding: 3px 3px 3px 20px;
+            background: transparent;
+            height: 20px;
+        }
+        .search-input::placeholder {
+            color: rgb(206, 206, 206);
+        }
+        .info-wrapper {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+            padding: 80px 50px;
+        }
+        .city-name {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+        .weather-state {
+            font-size: 13px;
+        }
+        .weather-icon {
+            width: 70px;
+            height: 70px;
+        }
+        .temperature {
+            font-size: 50px;
+            font-weight: lighter;
+            line-height: 1;
+            position: relative;
+        }
+        .temperature::after {
+            content: 'o';
+            position: absolute;
+            font-size: 30px;
+        }
+        .addition-section {
+            border-top: white;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+        .addition-section .row {
+            margin-bottom: 5px;
+            display: flex;
+        }
+        .addition-section .item {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .addition-section .item .label {
+            font-weight: bold;
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="main-section">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" class="search-input" placeholder="Tìm kiếm thành phố">
+            </div>
+            <div class="info-wrapper">
+                <p class="city-name">Ho Chi Minh</p>
+                <p class="weather-state">mây thưa</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" class="weather-icon" alt="weather icon">
+                <p class="temperature">26</p>
+            </div>
+        </div>
+        <div class="addition-section">
+            <div class="row">
+                <div class="item">
+                    <div class="label">MT Mọc</div>
+                    <div class="value sunrise">6:16</div>
+                </div>
+                
+                <div class="item">
+                    <div class="label">MT Lặn</div>
+                    <div class="value sunset">17:57</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="label">Độ ẩm</div>
+                    <div class="value"><span class="humidity">73%</span></div>
+                </div>
+                
+                <div class="item">
+                    <div class="label">Gió</div>
+                    <div class="value"><span class="wind-speed">5.54 km/h</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
